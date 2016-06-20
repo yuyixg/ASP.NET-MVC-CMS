@@ -133,6 +133,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ArticleDetailWidgetService.cs" />
     <Compile Include="Service\ArticleSummaryWidgetService.cs" />
+    <Compile Include="Service\ArticleTopImageWidgetService.cs" />
     <Compile Include="Service\ArticleTopWidgetService.cs" />
     <Compile Include="Service\ArticleListWidgetService.cs" />
     <Compile Include="Service\ArticleService.cs" />
@@ -162,6 +163,7 @@
     <Content Include="Views\Widget.ArticleSummary.cshtml" />
     <Content Include="Views\Widget.ArticleType.cshtml" />
     <Content Include="web.config" />
+    <Content Include="Views\Widget.ArticleTopsImage.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

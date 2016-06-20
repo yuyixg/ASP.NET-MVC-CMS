@@ -1,0 +1,43 @@
+﻿@using Easy.Web.CMS
+@model Easy.CMS.Article.ViewModel.ArticleTopWidgetViewModel
+@{
+    if (!Model.Widget.DetailPageUrl.IsNullOrEmpty())
+    {
+        Model.Widget.DetailPageUrl = Url.Content(Model.Widget.DetailPageUrl);
+    }
+    if (!Model.Widget.MoreLink.IsNullOrEmpty())
+    {
+        Model.Widget.MoreLink = Url.Content(Model.Widget.MoreLink);
+    }
+}
+<div class="article-list container-fluid">
+    @if (Model.Articles != null)
+    {
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="media-list">
+                    @foreach (var item in Model.Articles)
+                    {
+                        <li class="media">
+                            <div class="media-left">
+                                <a href="@(Model.Widget.DetailPageUrl + "?id=" + item.ID)">
+                                    <img class="media-object" src="@Url.PathContent(item.ImageThumbUrl)" alt="@item.Title">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h3 class="media-heading">
+                                    <a href="@(Model.Widget.DetailPageUrl + "?id=" + item.ID)">
+                                        @item.Title
+                                    </a>
+                                </h3>
+                                @item.Summary
+                            </div>
+                        </li>
+                    }
+                </ul>
+                <a style="float:right " href="@Model.Widget.MoreLink">More</a>
+</div>
+        </div>
+    }
+</div>
+

@@ -1,9 +1,9 @@
 @echo off
 REM: 请根据您的个人实际情况修改以下信息：
-set server=(local)
+set server=loaclhost
 set dataBase=ZKEACMS
 set dbUserId=sa
-set dbPassword=sa
+set dbPassword=1qaz@qwer
 @echo -----------------------------------------------------------------------------
 @echo *** 欢迎使用 ZKEACMS***
 @echo -----------------------------------------------------------------------------

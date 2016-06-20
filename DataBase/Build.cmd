@@ -1,10 +1,10 @@
 @echo off
 REM: 请根据您的个人实际情况修改以下信息：
-set server=(local)
+set server=localhost
 set dataBase=ZKEACMS
 set dbUserId=sa
-set dbPassword=sa
-set dbPath=E:\GitHub\CMS\Easy.CMS.Web\App_Data
+set dbPassword=1qaz@qwer
+set dbPath=D:\projects\ASP.NET-MVC-CMS\Easy.CMS.Web\App_Data
 @echo -----------------------------------------------------------------------------
 @echo *** 欢迎使用 ZKEACMS ***
 @echo -----------------------------------------------------------------------------
@@ -175,8 +175,6 @@ if %ERRORLEVEL% NEQ 0 goto errors
 sqlcmd -S %server% -d %dataBase% -U %dbUserId% -P %dbPassword% -b -i "InitialData\dbo.SectionContentCallToAction.Table.sql"
 if %ERRORLEVEL% NEQ 0 goto errors
 sqlcmd -S %server% -d %dataBase% -U %dbUserId% -P %dbPassword% -b -i "InitialData\dbo.SectionContentTitle.Table.sql"
-if %ERRORLEVEL% NEQ 0 goto errors
-sqlcmd -S %server% -d %dataBase% -U %dbUserId% -P %dbPassword% -b -i "InitialData\dbo.SectionContentVideo.Table.sql"
 if %ERRORLEVEL% NEQ 0 goto errors
 sqlcmd -S %server% -d %dataBase% -U %dbUserId% -P %dbPassword% -b -i "InitialData\dbo.SectionContentImage.Table.sql"
 if %ERRORLEVEL% NEQ 0 goto errors

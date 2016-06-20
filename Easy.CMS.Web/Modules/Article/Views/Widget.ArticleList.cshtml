@@ -11,6 +11,10 @@
     {
         <div class="row">
             <div class="col-sm-12">
+                @if (Model.IsPageable)
+                {
+                    Html.Pagin(Model.Pagin);
+                }
                 <ul class="media-list">
                     @foreach (var item in Model.Articles)
                          {

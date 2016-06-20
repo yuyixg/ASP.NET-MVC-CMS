@@ -40,29 +40,22 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a href="http://www.zkea.net" target="_blank" class="navbar-brand" title="ZKEASOFT">
+                    <a href="#" target="_blank" class="navbar-brand" title="技术中心网站">
                         <img src="~/Content/themes/Admin/images/logo_zkea_min.png" alt="" style="height: 20px;" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <p class="navbar-text">
-                        @Easy.Web.CMS.Version.CurrentVersion
+                      技术中心站点
                     </p>
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="~/">查看站点</a>
                         </li>
-                        <li>
-                            <a href="http://www.zkea.net/zkeacms/videos" target="_blank">演示视频</a>
-                        </li>
+                    
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="http://www.zkea.net/zkeacms/donate" target="_blank">
-                                <i class="glyphicon glyphicon-usd"></i>
-                                赞助
-                            </a>
-                        </li>
+                    
                         <li>
                             <a href="@Url.Action("Logout", "Account")" target="_self" title="退出">
                                 <i class="glyphicon glyphicon-off"></i>
@@ -79,6 +72,7 @@
                 <div class="navbar-header">
                     <div class="userInfo">
                         <img src="@Url.PathContent(ApplicationContext.CurrentUser.PhotoUrl)" class="img-circle" />
+
                         <strong>@ApplicationContext.CurrentUser.UserName</strong>
                     </div>
                 </div>
