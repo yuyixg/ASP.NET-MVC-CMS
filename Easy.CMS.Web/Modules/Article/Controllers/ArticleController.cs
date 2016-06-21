@@ -14,6 +14,7 @@ using Easy.Web.CMS.Article.Service;
 
 namespace Easy.CMS.Article.Controllers
 {
+  
     [AdminTheme, Authorize]
     public class ArticleController : BasicController<ArticleEntity, long, IArticleService>
     {
@@ -41,6 +42,6 @@ namespace Easy.CMS.Article.Controllers
             }
             return result;
         }
-      
+
     }
 }

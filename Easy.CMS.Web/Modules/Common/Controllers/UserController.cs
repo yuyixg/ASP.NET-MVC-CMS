@@ -32,5 +32,7 @@ namespace Easy.CMS.Common.Controllers
             }            
             return base.Edit(entity);
         }
+   
+ 
     }
 }

@@ -9,11 +9,18 @@
         <h1 class="align-center">
             @Model.Current.Title
         </h1>
+        <div class="align-center">
+            <span>
+                浏览量：
+                @Model.Current.Counter
+            </span>
+        </div>
         <div class="align-right">
             <span>
                 <i class="glyphicon glyphicon-user"></i>
                 @Model.Current.CreatebyName
             </span>
+
             <span>
                 <i class="glyphicon glyphicon-calendar"></i>
                 @((Model.Current.PublishDate ?? DateTime.Now).ToString("yyyy/MM/dd"))
@@ -27,5 +34,19 @@
         }
         @Html.Raw(Model.Current.ArticleContent)
     </div>
-</div>
+    <button id="btnlike" type="button" >Like @Model.Current.LikeCounter</button>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnlike").click(function () {
+                $.post("/ArticleCMS/Like", { "ID": "@Model.Current.ID" },
+   function (data) {
+       var likecounter = "Like " + data;
+       console.log(likecounter);
+       $("#btnlike").text(likecounter);
+      
+   }, "json");
 
+            });
+        });
+    </script>
+</div>

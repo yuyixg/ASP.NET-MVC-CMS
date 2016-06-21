@@ -17,6 +17,7 @@ namespace Easy.Web.CMS.Article.Models
         public string MetaKeyWords { get; set; }
         public string MetaDescription { get; set; }
         public int? Counter { get; set; }
+        public int? LikeCounter { get; set; }
         public string ArticleContent { get; set; }
 
         public string ImageThumbUrl { get; set; }

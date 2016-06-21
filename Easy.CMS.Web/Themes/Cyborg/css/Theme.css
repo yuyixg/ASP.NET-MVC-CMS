@@ -1615,6 +1615,7 @@ pre code {
 .row {
   margin-left: -15px;
   margin-right: -15px;
+  background:white;
 }
 .col-xs-1,
 .col-sm-1,
@@ -4733,6 +4734,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-color: #101010;
+  background: black;
 }
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,

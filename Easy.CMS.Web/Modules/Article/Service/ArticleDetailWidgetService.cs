@@ -27,9 +27,20 @@ namespace Easy.CMS.Article.Service
             if (viewModel.Current != null)
             {
                 var layout = httpContext.GetLayout();
+      
+                if (viewModel.Current.Counter != null)
+                {
+                    viewModel.Current.Counter += 1;
+                }
+                else
+                {
+                    viewModel.Current.Counter = 1;
+                }
+                ServiceLocator.Current.GetInstance<IArticleService>().Update(viewModel.Current);
                 layout.Page.MetaKeyWorlds = viewModel.Current.MetaKeyWords;
                 layout.Page.MetaDescription = viewModel.Current.MetaDescription;
                 layout.Page.Title = viewModel.Current.Title;
+
 
             }
             else
